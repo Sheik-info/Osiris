@@ -1,0 +1,52 @@
+{
+  "questions": [
+    {
+      "question": "La personne a-t-elle les yeux bleus ?",
+      "attribute": "eyeColor",
+      "value": "bleu",
+      "answer": null
+    },
+    {
+      "question": "La personne a-t-elle les yeux verts ?",
+      "attribute": "eyeColor",
+      "value": "vert",
+      "answer": null
+    },
+    {
+      "question": "La personne a-t-elle les yeux marron ?",
+      "attribute": "eyeColor",
+      "value": "marron",
+      "answer": null
+    },
+    {
+      "question": "La personne a-t-elle les cheveux blonds ?",
+      "attribute": "hairColor",
+      "value": "blond",
+      "answer": null
+    },
+    {
+      "question": "La personne a-t-elle les cheveux bruns ?",
+      "attribute": "hairColor",
+      "value": "brun",
+      "answer": null
+    },
+    {
+      "question": "La personne a-t-elle les cheveux noirs ?",
+      "attribute": "hairColor",
+      "value": "noir",
+      "answer": null
+    },
+    {
+      "question": "La personne est-elle une femme ?",
+      "attribute": "Sexe",
+      "value": "femme",
+      "answer": null
+    },
+    {
+      "question": "La personne est-elle un homme ?",
+      "attribute": "Sexe",
+      "value": "homme",
+      "answer": null
+    }
+  ]
+}
