@@ -98,13 +98,10 @@ Voici les principales bibliothèques utilisées (à installer via `pip install <
 
 ```bash
 Ba Cheikh
-p2109987
 
 Gayon Enzo 
-p2102346
 
 EL KARROUMI CHERAZADE
-p2001916
 
 ```
 
