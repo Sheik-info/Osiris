@@ -1,0 +1,56 @@
+
+<!--<link rel="stylesheet" href="/static/css/style.css">-->
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head> 
+    <title> IA </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body> 
+    <header> 
+        <div class="container"> 
+            <div class="center"> <h1 class="titre"> Osiris </h1></div>
+            <div class="right"> 
+                <a href="https://forge.univ-lyon1.fr/p2109987/am1-lifprojet"> Code </a>
+            </div>
+        </div> 
+    </header>
+
+    <div class="parent">
+        <div class="div1">
+            <h1> Bienvenue sur Osiris </h1>
+            <p> description de l'ia </p>
+        </div>
+
+        <div class="div2">
+            <h1 class="fonc"> Ajouter une personnalité au jeu </h1>
+            <p class="desc"> 
+                Remplissez le formulaire ci-dessous pour enregistrer une nouvelle personne. <br>
+                Les informations que vous entrez seront ajoutées automatiquement à notre fichier, regroupées par catégorie (Nom, Prénom, Yeux, Cheveux, Sexe). <br>
+
+                Chaque envoi complète la liste existante, sans rien effacer. <br>
+                Vous pouvez ajouter autant de personnes que vous le souhaitez ! <br>  
+            </p>
+            <div class="butt"> 
+                <a href="{% url 'executer_fonction' %}"> jouer avec les données </a>    
+            </div>
+        </div>
+
+
+
+
+        <div class="div2"> 
+            <h1 class="fonc"> mini Akinator </h1>
+            <p class="desc"> essaie de deviner et d'afficher l'image que vous avez en tête
+                grâce à des caractéristiques phisyques puis vous montre la star de cinema 
+                que vous avez en tête
+                 </p>
+            <div class="butt"> 
+                <a href="{% url 'jouer_akinator' %}"> Jouer à Akinator</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
