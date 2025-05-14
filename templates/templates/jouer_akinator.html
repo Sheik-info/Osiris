@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+    <title>Jouer à Akinator</title>
+</head>
+<body>
+        <header>
+            <h1 class="titre">Bienvenue dans Akinator</h1>
+        </header>
+
+        <div class="questions">
+            <p>{{ question.question }}</p>
+        
+
+        <form method="POST" id="form_reponse">
+            {% csrf_token %}
+            <input type="radio" name="reponse" value="true" id="oui" required> Oui
+            <input type="radio" name="reponse" value="false" id="non"> Non </br> </br>
+            <input type="hidden" name="question_id" value="{{ question.id }}">
+            <button type="submit">Suivant</button>
+        </form>
+
+    </div>
+
+        <footer>
+        </footer>
+
+        <script>
+            document.getElementById('form_reponse').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = new FormData(this);
+                fetch("{% url 'enregistrer_reponse' %}", {
+                    method: 'POST',
+                    body: form
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'réponse enregistrée') {
+                        location.reload();
+                    }
+                });
+            });
+        </script>
+</body>
+</html>
+

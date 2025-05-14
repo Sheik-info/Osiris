@@ -1,0 +1,85 @@
+{% load static %}
+
+<head> 
+    <title> IA </title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+</head>
+<body> 
+    <header> 
+        <div class="container"> 
+            <div class="center"> <h1 class="titre"> Osiris </h1></div>
+            <div class="right"> 
+                <a href="https://forge.univ-lyon1.fr/p2109987/am1-lifprojet"> Code </a>
+            </div>
+        </div> 
+    </header>
+
+    <div class="button">
+        <a href="{% url 'index' %}"> retour </a>
+    </div>
+
+
+    <div class="image-gen">
+        <img src="{% static 'img/foo.png' %}" alt="Image IA" />
+    </div>
+
+
+    
+    <div class="formulaire">
+        <div><h2> Description de la personnalité </h2></div>
+
+        <form method="post", class="donnee-form">
+            {% csrf_token %}
+
+            <ul> 
+                <li> 
+                    <label for="prenom"> Prenom : </label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Entrez le prenom" required pattern="[A-Za-zÀ-ÿ\- ]{1,50}">             
+                </li>
+                <li> 
+                    <label for="nom"> nom : </label>
+                    <input type="text" id="nom" name="nom" placeholder="Entrez le nom" required pattern="[A-Za-zÀ-ÿ\- ]{1,50}">
+                </li>
+                <li> 
+                    <label for="yeux"> couleur des yeux : </label>
+                    <!-- <input type="text" id="yeux" name="yeux" placeholder="Entrez la couleur des yeux"> -->
+                    <select id="yeux", name="yeux">
+                        <option value=""> choisissez la couleur des yeux </option>
+                        <option value="marron"> marron </option>
+                        <option value="bleu"> bleu </option>
+                        <option value="vert"> vert </option>
+                    </select>
+                </li>
+
+                <li> 
+                    <label for="cheveux"> couleur de cheveux : </label>
+                    <!-- <input type="text" id="cheveux" name="cheveux" placeholder="Entrez le cheveux"> -->
+                    <select id="cheveux", name="cheveux">
+                        <option value=""> choisissez la couleur des cheveux </option>
+                        <option value="brun"> brun </option>
+                        <option value="chatain"> chatain </option>
+                        <option value="blond"> blond </option>
+                        <option value="roux"> roux </option>
+                        <option value="blanc"> blanc </option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="sexe"> sexe : </label>
+                    <!-- <input type="text" id="sexe" name="sexe" placeholder="Entrez le sexe" -->
+                    <select id="sexe", name="sexe">
+                        <option value=""> choisissez le genre </option>
+                        <option value="homme"> homme </option>
+                        <option value="femme"> femme </option>
+                    </select>
+                </li>
+            </ul>
+
+            <div class="butt"> <button type="submit"> Soumettre </button> </div>
+
+        </form>
+
+        <label class="erreur"> {{erreur}}</label>
+
+    </div>
+</body>
